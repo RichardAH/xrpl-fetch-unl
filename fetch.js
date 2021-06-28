@@ -150,7 +150,7 @@ const fetch_validated_unl = (url, master_public_key = false) =>
                         unl[nodepub] =
                         {
                             public_key: manifest.SigningPubKey,
-                            parse_and_verify: ((public_key) =>  // returns json of sto, and ['_verified'] = bool 
+                            verify_validation: ((public_key) =>  // returns json of sto, and ['_verified'] = bool 
                             {
                                 return (val) => 
                                 {
