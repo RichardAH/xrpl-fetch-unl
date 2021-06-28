@@ -154,6 +154,12 @@ const fetch_validated_unl = (url, master_public_key = false) =>
                             {
                                 return (val) => 
                                 {
+                                    if (typeof(val) == 'string')
+                                        val = Buffer.from(val, 'hex')
+                                    else if (typeof(val) == 'object' && val.data !== undefined)
+                                        val = val.data
+                            
+
                                     const fail = (msg) =>
                                     {
                                         console.error("Validation Parse Error: ", msg)
