@@ -1,22 +1,33 @@
 {
   "name": "xrpl-fetch-unl",
   "version": "1.0.0",
-  "description": "Fetch a validator list for the XRPL and use it to verify validations",
-  "main": "fetch.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Fetch and verify an XRPL validator list (UNL) and use it to verify validations",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RichardAH/xrpl-fetch-unl.git"
+    "url": "https://github.com/RichardAH/xrpl-fetch-unl"
   },
-  "author": "Richard Holland",
+  "keywords": [
+    "xrpl",
+    "validations",
+    "unl"
+  ],
+  "contributors": [
+    "Richard Holland <richard.holland@starstone.co.nz>"
+  ],
   "license": "CC0",
-  "bugs": {
-    "url": "https://github.com/RichardAH/xrpl-fetch-unl/issues"
+  "maintainers": [
+    {
+      "name": "Richard Holland",
+      "url": "https://github.com/richardah",
+      "email": "richard.holland@starstone.co.nz"
+    }
+  ],
+  "main": "fetch.js",
+  "engines": {
+    "node": ">= 12.0"
   },
-  "homepage": "https://github.com/RichardAH/xrpl-fetch-unl#readme",
   "dependencies": {
-    "elliptic": "^6.5.4"
-  }  
+    "elliptic": "^6.5.4",
+    "ripple-address-codec": "^4.2.3"
+  }
 }
